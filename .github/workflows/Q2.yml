@@ -1,1 +1,24 @@
+name: Question2 Q2_archive_README.md
+on:
+  push:
+    branches:
+      - main
 
+jobs:
+  archive_readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Création d un fichier Q2_archive_README.md
+        run: date > Q2_archive_README.md
+
+      - name: Push Q1_archive_README.md
+        run: |
+          git config --global user.name "OcsCgn"
+          git config --global user.email "Oscar.cocagne@free.fr"
+          git add Q1_archive_README.md
+          git commit -m "Add Q1_archive_README.md"
+          git push

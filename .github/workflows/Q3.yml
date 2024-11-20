@@ -19,6 +19,10 @@ jobs:
     - name: Nom Prenom
       run: 
          echo"Oscar cocagne" >> Q3_archive_java.txt
+    - name: Q3.java
+      run: 
+         echo Q3.java >> Q3_archive_java.txt
+      
       
     - name: JY commit et push
       run: |

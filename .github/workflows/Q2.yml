@@ -13,7 +13,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Création d un fichier Q2_archive_README.md
-        run: date > Q2_archive_README.md
+        run: cp README date --global user.name > Q2_archive_README.md
+        
 
       - name: Push Q2_archive_README.md
         run: |

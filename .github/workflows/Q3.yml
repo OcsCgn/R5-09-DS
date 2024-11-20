@@ -16,8 +16,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
-    - name: Creer un fichier Q3_archive_java.txt
-      run: mvn -B package --file pom.xml
+    - name: Copier README.md dans Q3_archive_java.txt
+      run: 
+          cp Q3.java Q3_archive_java.txt
+
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph

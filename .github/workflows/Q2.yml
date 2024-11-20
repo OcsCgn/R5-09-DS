@@ -1,19 +1,14 @@
 name: Question2 Q2_archive_README.md
-on:
-  push:
-    branches:
-      - main
-
+on: [push]
 jobs:
   archive_readme:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
 
       - name: Création d un fichier Q2_archive_README.md
-        run: cp README date --global user.name > Q2_archive_README.md
+        run: 
+          cp README date --global user.name > Q2_archive_README.md
         
 
       - name: Push Q2_archive_README.md

@@ -1,19 +1,29 @@
-name: Question1 Archive README
+name: Copier fichier Readme
 
-on: [push]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 jobs:
-  archive_readme:
+  build:
+
+    # JY: 
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:
-      - name: Copier README.md dans Q1_archive_README.md
-        run: 
+    - uses: actions/checkout@v4
+    - name: Copier README.md dans Q1_archive_README.md
+      run: 
           cp README.md Q1_archive_README.md
-
-      - name: Push Q1_archive_README.md
-        run: |
-          git config --global user.name "OcsCgn"
-          git config --global user.email "Oscar.cocagne@free.fr"
-          git add Q1_archive_README.md
-          git commit -m "Add Q1_archive_README.md"
-          git push
+          
+    - name: JY commit et push
+      run: |
+        git config --global user.name OcsCgn
+        git config --global user.email Oscar.cocagne@free.fr
+        git add -A
+        git status
+        git commit -m "Copie du fichier"
+        git push

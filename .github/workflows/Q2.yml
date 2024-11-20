@@ -15,10 +15,10 @@ jobs:
       - name: Création d un fichier Q2_archive_README.md
         run: date > Q2_archive_README.md
 
-      - name: Push Q1_archive_README.md
+      - name: Push Q2_archive_README.md
         run: |
           git config --global user.name "OcsCgn"
           git config --global user.email "Oscar.cocagne@free.fr"
-          git add Q1_archive_README.md
-          git commit -m "Add Q1_archive_README.md"
+          git add Q2_archive_README.md
+          git commit -m "Add Q2_archive_README.md"
           git push

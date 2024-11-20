@@ -18,7 +18,11 @@ jobs:
     - name: Set up JDK 17
     - name: Copier Q3.java dans Q3_archive_java.txt
       run: 
-          cp Q3.java Q3_archive_java.txt
+          cp Q3.java >> Q3_archive_java.txt
+
+    - name: Nom Prenom
+      run: 
+         echo"Oscar cocagne" >> Q3_archive_java.txt
       
     - name: JY commit et push
       run: |

@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
-    - name: Copier README.md dans Q3_archive_java.txt
+    - name: Copier Q3.java dans Q3_archive_java.txt
       run: 
           cp Q3.java Q3_archive_java.txt
       

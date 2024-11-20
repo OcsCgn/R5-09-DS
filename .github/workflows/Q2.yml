@@ -17,11 +17,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Création d un fichier Q2_archive_README.md
       run: 
-         cp README.md Q2_archive_README.md 
-    - name: Ajout de la date
-      run: 
-          date > Q2_archive_README.md
-          
+         cp README.md Q2_archive_README.md
+         date > Q2_archive_README.md
           
     - name: JY commit et push
       run: |

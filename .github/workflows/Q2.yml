@@ -23,7 +23,7 @@ jobs:
           cp README.md Q1_archive_README.md
     - name: Ajouter le nom prenom
       run: 
-        --global user.name > Q1_archive_README.md
+        Oscar cocagne > Q1_archive_README.md
           
     - name: JY commit et push
       run: |

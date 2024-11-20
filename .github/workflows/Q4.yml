@@ -1,0 +1,36 @@
+name: Q4
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    # JY: 
+    permissions: write-all
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Création d un fichier Q4_archive_date.txt
+      run: 
+         cp Q4.java Q4_archive_date.txt
+    - name: Ajout de la date
+      run: 
+        date "JJ-MM-AAAA" >> Q4_archive_date.txt
+    - name: Ajout du prenom
+      run: 
+        echo "Oscar cocagne" >> Q4_archive_date.txt
+        
+          
+    - name: JY commit et push
+      run: |
+        git config --global user.name OcsCgn
+        git config --global user.email Oscar.cocagne@free.fr
+        git add -A
+        git status
+        git commit -m "Creation du fichier"
+        git push
